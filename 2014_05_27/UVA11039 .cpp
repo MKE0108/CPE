@@ -4,14 +4,7 @@
 using namespace std;
 int sol(vector<int> first, vector<int> second) {
 	int building = 0;
-	int top = 0;
-	if (first.size() == 0) {
-		return 0;
-	}
-	else {
-		building++;
-		top = first.back();
-	}
+	int top = 0x3f3f3f3f;
 	while (1) {
 		vector<int>* to_do_data;
 		if (building % 2 == 0) {
@@ -20,7 +13,6 @@ int sol(vector<int> first, vector<int> second) {
 		else {
 			to_do_data = &second;
 		}
-
 		if (to_do_data->size() == 0) {
 			break;
 		}
